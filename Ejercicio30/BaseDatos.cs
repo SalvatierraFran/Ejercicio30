@@ -52,7 +52,7 @@ namespace Datos
 
         public string Direccion
         {
-            get { return this._direccion }
+            get { return this._direccion; }
         }
 
         public string Ciudad
@@ -68,6 +68,40 @@ namespace Datos
         public string Cuit
         {
             get { return this._cuit; }
+        }
+
+        public int Cantidad
+        {
+            get { return this._cantidad; }
+        }
+
+        public string Descripcion
+        {
+            get { return this._descripcion; }
+        }
+
+        public double PrecioUnit
+        {
+            get { return this._precioUnit; }
+        }
+
+
+        /*Constructores*/
+        public BaseDatos(string Nombre, string Tel, string Dire, string Ciudad, string CP, string Cuit)
+        {
+            this._nombre = Nombre;
+            this._telefono = Tel;
+            this._direccion = Dire;
+            this._ciudad = Ciudad;
+            this._codPosta = CP;
+            this._cuit = Cuit;
+        }
+
+        public BaseDatos(int Cantidad, string Descripcion, double PrecioUnit)
+        {
+            this._cantidad = Cantidad;
+            this._descripcion = Descripcion;
+            this._precioUnit = PrecioUnit;
         }
     }
 }
